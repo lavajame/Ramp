@@ -19,13 +19,13 @@ from ramp_hedging import RampStripPayoff, DeltaHedgingSimulation, plot_simulatio
 
 # ── CONFIG ───────────────────────────────────────────────────────────────────
 S0      = 100
-K_LO    = 97
+K_LO    = 102
 K_HI    = 105
 T       = 1
 N       = 250
 R       = 0.035
 Q       = 0.035
-SIGMA   = 0.18
+SIGMA   = 0.04
 CAP     = 2.0
 N_PATHS = 50_000
 SEED    = 421
