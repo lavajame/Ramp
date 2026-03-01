@@ -41,7 +41,15 @@ print("Running simulation …")
 res_plain, res_vl = sim.run()
 print("Done.\n")
 
-# ── Figure 1: single-run diagnostic (vol-lock result) ────────────────────────
+# ── Figure 1a: single-run diagnostic (plain delta-hedge, no vol-lock) ────────
+fig1a = plot_simulation(res_plain, n_show=40)
+fig1a.texts[0].set_text(fig1a.texts[0].get_text() + "  [NO VOL-LOCK]")
+out1a = "simulation_diagnostic_plain.png"
+fig1a.savefig(out1a, dpi=150, bbox_inches="tight")
+plt.close(fig1a)
+print(f"Saved → {out1a}")
+
+# ── Figure 1b: single-run diagnostic (vol-lock result) ───────────────────────
 fig1 = plot_simulation(res_vl, n_show=40)
 out1 = "simulation_diagnostic.png"
 fig1.savefig(out1, dpi=150, bbox_inches="tight")
